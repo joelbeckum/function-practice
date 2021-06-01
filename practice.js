@@ -80,21 +80,35 @@
 
 // console.log(joinArr(filteredArr))
 
-const calcFishOdds = () => {
-    let result = Math.random() * 2
+// const calcFishOdds = () => {
+//     let result = Math.random() * 2
 
-    if (result <= 1) {
-        return true
+//     if (result <= 1) {
+//         return true
+//     }
+
+//     return false
+// }
+
+// let fishResult = calcFishOdds()
+
+// if (fishResult) {
+//     console.log("Sven hooked a tuna! :)")
+// } else {
+//     console.log("Sven came up empty-handed. :(")
+// }
+
+const orderMeal = (sandwich, side, drink, dessert) => {
+    const meal = {
+        sandwich: sandwich,
+        side: side,
+        drink: drink,
+        dessert: dessert
     }
 
-    return false
+    return meal
 }
 
-let fishResult = calcFishOdds()
+const takeOutBag = orderMeal("Double decker Heart Attacker", "Cheese Fries", "54oz Coke", "Triple Scoop Fudge Sundae")
 
-if (fishResult) {
-    console.log("Sven hooked a tuna! :)")
-} else {
-    console.log("Sven came up empty-handed. :(")
-}
-
+console.log(takeOutBag)
