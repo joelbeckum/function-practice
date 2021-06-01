@@ -53,29 +53,48 @@
 //     console.log(evenOrOdd(num))
 // }
 
-const words = [
-    "The", "killing", "complex", "houses",
-    "married", "kittens", "and", "single",
-    "soldiers", "and", "their", "kleptomaniacal",
-    "families"
-]
+// const words = [
+//     "The", "killing", "complex", "houses",
+//     "married", "kittens", "and", "single",
+//     "soldiers", "and", "their", "kleptomaniacal",
+//     "families"
+// ]
 
-const filteredArr = []
+// const filteredArr = []
 
-const filterKWords = (arr) => {
-    for (let word of arr) {
-        if (!word.startsWith("k")) {
-            filteredArr.push(word)
-        }
+// const filterKWords = (arr) => {
+//     for (let word of arr) {
+//         if (!word.startsWith("k")) {
+//             filteredArr.push(word)
+//         }
+//     }
+// }
+
+// const joinArr = (arr) => {
+//     let joinedArr = arr.join(' ')
+
+//     return joinedArr
+// }
+
+// filterKWords(words)
+
+// console.log(joinArr(filteredArr))
+
+const calcFishOdds = () => {
+    let result = Math.random() * 2
+
+    if (result <= 1) {
+        return true
     }
+
+    return false
 }
 
-const joinArr = (arr) => {
-    let joinedArr = arr.join(' ')
+let fishResult = calcFishOdds()
 
-    return joinedArr
+if (fishResult) {
+    console.log("Sven hooked a tuna! :)")
+} else {
+    console.log("Sven came up empty-handed. :(")
 }
 
-filterKWords(words)
-
-console.log(joinArr(filteredArr))
