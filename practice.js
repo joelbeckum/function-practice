@@ -24,31 +24,58 @@
 
 // console.log(add(17, 4, 11))
 
-const go = (direction, speed) => {
-    let message = `The car is moving ${direction} at ${speed} mph.`
+// const go = (direction, speed) => {
+//     let message = `The car is moving ${direction} at ${speed} mph.`
 
-    if (speed > 75) {
-        let speedMessage = message.concat(" SLOW DOWN!")
-        console.log(speedMessage)
-        return
+//     if (speed > 75) {
+//         let speedMessage = message.concat(" SLOW DOWN!")
+//         console.log(speedMessage)
+//         return
+//     }
+
+//     console.log(message)
+// }
+
+// go("in circles", 12)
+// go("forward", 85)
+
+// const evenOrOdd = (number) => {
+//     if ((number % 2) === 0) {
+//         return "even"
+//     }
+
+//     return "odd"
+// }
+
+// const testArr = [3, 4, 17, 1, 260, 0]
+
+// for (let num of testArr) {
+//     console.log(evenOrOdd(num))
+// }
+
+const words = [
+    "The", "killing", "complex", "houses",
+    "married", "kittens", "and", "single",
+    "soldiers", "and", "their", "kleptomaniacal",
+    "families"
+]
+
+const filteredArr = []
+
+const filterKWords = (arr) => {
+    for (let word of arr) {
+        if (!word.startsWith("k")) {
+            filteredArr.push(word)
+        }
     }
-
-    console.log(message)
 }
 
-go("in circles", 12)
-go("forward", 85)
+const joinArr = (arr) => {
+    let joinedArr = arr.join(' ')
 
-const evenOrOdd = (number) => {
-    if ((number % 2) === 0) {
-        return "even"
-    }
-
-    return "odd"
+    return joinedArr
 }
 
-const testArr = [3, 4, 17, 1, 260, 0]
+filterKWords(words)
 
-for (let num of testArr) {
-    console.log(evenOrOdd(num))
-}
+console.log(joinArr(filteredArr))
