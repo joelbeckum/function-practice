@@ -1,8 +1,19 @@
-const calculateAgeInDogYears = (age) => {
-    const ageInDogYears = age / 7
+// const calculateAgeInDogYears = (age) => {
+//     const ageInDogYears = age / 7
 
-    return ageInDogYears
+//     return ageInDogYears
+// }
+
+// const dogAge = calculateAgeInDogYears(22)
+// console.log(dogAge)
+
+const logFavoriteBreed = (dogBreed) => {
+    if (dogBreed === "meow") {
+        return "I like cats"
+    }
+    
+    return `My favorite dog breed is ${dogBreed}`
 }
 
-const dogAge = calculateAgeInDogYears(22)
-console.log(dogAge)
+const myFavorite = logFavoriteBreed("golden retriever")
+console.log(`When it comes to pets, ${myFavorite}`)
