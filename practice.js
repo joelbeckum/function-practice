@@ -98,17 +98,72 @@
 //     console.log("Sven came up empty-handed. :(")
 // }
 
-const orderMeal = (sandwich, side, drink, dessert) => {
-    const meal = {
-        sandwich: sandwich,
-        side: side,
-        drink: drink,
-        dessert: dessert
-    }
+// const orderMeal = (sandwich, side, drink, dessert) => {
+//     const meal = {
+//         sandwich: sandwich,
+//         side: side,
+//         drink: drink,
+//         dessert: dessert
+//     }
 
-    return meal
+//     return meal
+// }
+
+// const takeOutBag = orderMeal("Double decker Heart Attacker", "Cheese Fries", "54oz Coke", "Triple Scoop Fudge Sundae")
+
+// console.log(takeOutBag)
+
+// const twice = number => number * 2
+
+// const timesFive = number => number * 5
+
+// const square = number => number * number
+
+// const bigify = (number, operationFunction) {
+//     const result = operationFunction(number)
+//     return result
+// }
+
+// const number = 7
+// const byTwo = bigify(number, twice)
+// const byFive = bigify(number, timesFive)
+// const byItself = bigify(number, square)
+
+const washDishes = (person) => {
+    return `${person.firstName} ${person.lastName} washed the dishes`
 }
 
-const takeOutBag = orderMeal("Double decker Heart Attacker", "Cheese Fries", "54oz Coke", "Triple Scoop Fudge Sundae")
+const shopForGroceries = (person) => {
+    return `${person.firstName} ${person.lastName} went shopping for groceries`
+}
 
-console.log(takeOutBag)
+const washTheCar = (person) => {
+    return `${person.firstName} ${person.lastName} washed the car`
+}
+
+const cleanKitchen = (person) => {
+    return `${person.firstName} ${person.lastName} cleaned the kitchen`
+}
+
+const walkTheDog = (person) => {
+    return `${person.firstName} ${person.lastName} walked the dog`
+}
+
+const foldLaundry = (person) => {
+    return `${person.firstName} ${person.lastName} folded all the laundry`
+}
+
+const testPerson = {
+    firstName: "Joe",
+    lastName: "Testobject"
+}
+
+const dayPlanner = (firstChore, secondChore, thirdChore, person, day) => {
+    firstChoreString = firstChore(person)
+    secondChoreString = secondChore(person)
+    thirdChoreString = thirdChore(person)
+
+    return `On ${day}, ${firstChoreString}, ${secondChoreString}, and ${thirdChoreString}.`
+}
+
+console.log(dayPlanner(washTheCar, shopForGroceries, foldLaundry, testPerson, "Thursday"))
